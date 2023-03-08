@@ -1,3 +1,3 @@
 window.onload = () => {
-  //YaSendSuggestToken("https://example.com")
+  YaSendSuggestToken("https://example.com");
 };

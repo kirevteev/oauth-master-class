@@ -1,3 +1,3 @@
 window.onload = () => {
-  YaSendSuggestToken("https://oauth-master-class-tau.vercel.app/");
+  YaSendSuggestToken("https://oauth-master-class-6dul472he-kirevteev.vercel.app/");
 };

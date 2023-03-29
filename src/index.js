@@ -35,6 +35,29 @@ window.onload = () => {
       .catch((error) => console.log("Что-то пошло не так: ", error));
   };
   document.getElementById("button").onclick = () => {
-    // TODO button
+    window.YaAuthSuggest.init(
+      {
+        client_id: "44caae5a67534ee4b8f15d40ff38c04f",
+        response_type: "token",
+        redirect_uri: "https://oauth-master-class-ojzjsvwk7-kirevteev.vercel.app/token.html",
+      },
+      "https://oauth-master-class-ojzjsvwk7-kirevteev.vercel.app",
+      {
+        parentId: "buttonContainer",
+        view: "button",
+        buttonTheme: "light",
+        buttonSize: "xs",
+        buttonBorderRadius: 20,
+      }
+    )
+      .then(({ handler }) => handler())
+      .then(async (data) => {
+        const result = await fetchYandexData(data.access_token);
+
+        authorize(result);
+
+        console.log(result, data);
+      })
+      .catch((error) => console.log("Что-то пошло не так: ", error));
   };
 };

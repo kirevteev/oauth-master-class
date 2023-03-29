@@ -18,11 +18,11 @@ const fetchYandexData = (token) =>
 window.onload = () => {
   document.getElementById("suggest").onclick = () => {
     YaAuthSuggest.init({
-         client_id: '--44caae5a67534ee4b8f15d40ff38c04f--', 
+         client_id: '44caae5a67534ee4b8f15d40ff38c04f', 
          response_type: 'token',
-         redirect_uri: '--https://oauth-master-class-qiactj9p8-kirevteev.vercel.app/token.html--'
+         redirect_uri: 'https://oauth-master-class-qiactj9p8-kirevteev.vercel.app/token.html'
       },
-      '--https://oauth-master-class-qiactj9p8-kirevteev.vercel.app--'
+      'https://oauth-master-class-qiactj9p8-kirevteev.vercel.app'
    )
    .then(({ handler }) => handler())
       .then(async (data) => {
